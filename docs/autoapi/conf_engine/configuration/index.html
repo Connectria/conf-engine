@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>conf_engine.configuration &#8212; config-engine 1.0.2 documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/classic.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css" />
+    
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="conf_engine.exceptions" href="../exceptions/index.html" />
+    <link rel="prev" title="conf_engine.__version__" href="../__version__/index.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../exceptions/index.html" title="conf_engine.exceptions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../__version__/index.html" title="conf_engine.__version__"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">config-engine 1.0.2 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" accesskey="U"><code class="xref py py-mod docutils literal notranslate"><span class="pre">conf_engine</span></code></a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">conf_engine.configuration</span></code></a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-conf_engine.configuration">
+<span id="conf-engine-configuration"></span><h1><a class="reference internal" href="#module-conf_engine.configuration" title="conf_engine.configuration"><code class="xref py py-mod docutils literal notranslate"><span class="pre">conf_engine.configuration</span></code></a><a class="headerlink" href="#module-conf_engine.configuration" title="Permalink to this heading">¶</a></h1>
+<section id="module-contents">
+<h2>Module Contents<a class="headerlink" href="#module-contents" title="Permalink to this heading">¶</a></h2>
+<section id="classes">
+<h3>Classes<a class="headerlink" href="#classes" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#conf_engine.configuration.ConfigGroup" title="conf_engine.configuration.ConfigGroup"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ConfigGroup</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#conf_engine.configuration.Configuration" title="conf_engine.configuration.Configuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Configuration</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="attributes">
+<h3>Attributes<a class="headerlink" href="#attributes" title="Permalink to this heading">¶</a></h3>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#conf_engine.configuration.REGISTERED_PARSERS" title="conf_engine.configuration.REGISTERED_PARSERS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">REGISTERED_PARSERS</span></code></a></p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<dl class="py data">
+<dt class="sig sig-object py" id="conf_engine.configuration.REGISTERED_PARSERS">
+<span class="sig-prename descclassname"><span class="pre">conf_engine.configuration.</span></span><span class="sig-name descname"><span class="pre">REGISTERED_PARSERS</span></span><a class="headerlink" href="#conf_engine.configuration.REGISTERED_PARSERS" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="conf_engine.configuration.ConfigGroup">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">conf_engine.configuration.</span></span><span class="sig-name descname"><span class="pre">ConfigGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Union</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.ConfigGroup" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.ConfigGroup.__getattr__">
+<span class="sig-name descname"><span class="pre">__getattr__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.ConfigGroup.__getattr__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.ConfigGroup.__contains__">
+<span class="sig-name descname"><span class="pre">__contains__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.ConfigGroup.__contains__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.ConfigGroup._get_option">
+<span class="sig-name descname"><span class="pre">_get_option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.ConfigGroup._get_option" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.ConfigGroup._cache_option_value">
+<span class="sig-name descname"><span class="pre">_cache_option_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.ConfigGroup._cache_option_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.ConfigGroup._get_option_value_from_cache">
+<span class="sig-name descname"><span class="pre">_get_option_value_from_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.ConfigGroup._get_option_value_from_cache" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.ConfigGroup._option_value_cached">
+<span class="sig-name descname"><span class="pre">_option_value_cached</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.ConfigGroup._option_value_cached" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.ConfigGroup._get_option_value">
+<span class="sig-name descname"><span class="pre">_get_option_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../options/index.html#conf_engine.options.Option" title="conf_engine.options.Option"><span class="pre">conf_engine.options.Option</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.ConfigGroup._get_option_value" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.ConfigGroup._get_option_value_from_source">
+<span class="sig-name descname"><span class="pre">_get_option_value_from_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../options/index.html#conf_engine.options.Option" title="conf_engine.options.Option"><span class="pre">conf_engine.options.Option</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.ConfigGroup._get_option_value_from_source" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.ConfigGroup.flush_cache">
+<span class="sig-name descname"><span class="pre">flush_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.ConfigGroup.flush_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Flush the value cache and read from configuration source on
+next access.
+:param name: If name is provided, only the value for the named
+option is flushed.
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.ConfigGroup.register_options">
+<span class="sig-name descname"><span class="pre">register_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../options/index.html#conf_engine.options.Option" title="conf_engine.options.Option"><span class="pre">conf_engine.options.Option</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.ConfigGroup.register_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.ConfigGroup.register_option">
+<span class="sig-name descname"><span class="pre">register_option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../options/index.html#conf_engine.options.Option" title="conf_engine.options.Option"><span class="pre">conf_engine.options.Option</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.ConfigGroup.register_option" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="conf_engine.configuration.Configuration">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">conf_engine.configuration.</span></span><span class="sig-name descname"><span class="pre">Configuration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.Configuration" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.Configuration.__getattr__">
+<span class="sig-name descname"><span class="pre">__getattr__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.Configuration.__getattr__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.Configuration.__contains__">
+<span class="sig-name descname"><span class="pre">__contains__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">item</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.Configuration.__contains__" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.Configuration.register_options">
+<span class="sig-name descname"><span class="pre">register_options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="p"><span class="pre">[</span></span><a class="reference internal" href="../options/index.html#conf_engine.options.Option" title="conf_engine.options.Option"><span class="pre">conf_engine.options.Option</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.Configuration.register_options" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register bulk options with the config.
+:param options: List of options.
+:param group: Group name to which options are added.
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.Configuration.flush_cache">
+<span class="sig-name descname"><span class="pre">flush_cache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.Configuration.flush_cache" title="Permalink to this definition">¶</a></dt>
+<dd><p>Signal all configuration groups to flush their cache and
+read from configuration source on next access.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.Configuration.register_option">
+<span class="sig-name descname"><span class="pre">register_option</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="../options/index.html#conf_engine.options.Option" title="conf_engine.options.Option"><span class="pre">conf_engine.options.Option</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">create_group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.Configuration.register_option" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register options with the config.  If group is specified, the options are
+added to the option group, otherwise options are registered to the base object.
+:param option: Option to register.
+:param group: Group name to which the option is added.
+:param create_group: Create the group if not already registered.
+:return:</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.Configuration.registered_parsers">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">registered_parsers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.Configuration.registered_parsers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="conf_engine.configuration.Configuration._get_group">
+<span class="sig-name descname"><span class="pre">_get_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#conf_engine.configuration.Configuration._get_group" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get group by its name as called during attribute access against the
+configuration object.  If the option cannot be found an UnregisteredOption
+error will be raised.</p>
+<p>If the option matches a group name, the group object is returned and the
+subsequent attribute access is handled by the group object.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#"><code class="xref py py-mod docutils literal notranslate"><span class="pre">conf_engine.configuration</span></code></a><ul>
+<li><a class="reference internal" href="#module-contents">Module Contents</a><ul>
+<li><a class="reference internal" href="#classes">Classes</a></li>
+<li><a class="reference internal" href="#attributes">Attributes</a><ul>
+<li><a class="reference internal" href="#conf_engine.configuration.REGISTERED_PARSERS">REGISTERED_PARSERS</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.ConfigGroup">ConfigGroup</a><ul>
+<li><a class="reference internal" href="#conf_engine.configuration.ConfigGroup.__getattr__">__getattr__</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.ConfigGroup.__contains__">__contains__</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.ConfigGroup._get_option">_get_option</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.ConfigGroup._cache_option_value">_cache_option_value</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.ConfigGroup._get_option_value_from_cache">_get_option_value_from_cache</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.ConfigGroup._option_value_cached">_option_value_cached</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.ConfigGroup._get_option_value">_get_option_value</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.ConfigGroup._get_option_value_from_source">_get_option_value_from_source</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.ConfigGroup.flush_cache">flush_cache</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.ConfigGroup.register_options">register_options</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.ConfigGroup.register_option">register_option</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#conf_engine.configuration.Configuration">Configuration</a><ul>
+<li><a class="reference internal" href="#conf_engine.configuration.Configuration.__getattr__">__getattr__</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.Configuration.__contains__">__contains__</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.Configuration.register_options">register_options</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.Configuration.flush_cache">flush_cache</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.Configuration.register_option">register_option</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.Configuration.registered_parsers">registered_parsers</a></li>
+<li><a class="reference internal" href="#conf_engine.configuration.Configuration._get_group">_get_group</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div>
+    <h4>Previous topic</h4>
+    <p class="topless"><a href="../__version__/index.html"
+                          title="previous chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">conf_engine.__version__</span></code></a></p>
+  </div>
+  <div>
+    <h4>Next topic</h4>
+    <p class="topless"><a href="../exceptions/index.html"
+                          title="next chapter"><code class="xref py py-mod docutils literal notranslate"><span class="pre">conf_engine.exceptions</span></code></a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../../_sources/autoapi/conf_engine/configuration/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="../exceptions/index.html" title="conf_engine.exceptions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../__version__/index.html" title="conf_engine.__version__"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../../index.html">config-engine 1.0.2 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../../index.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../index.html" ><code class="xref py py-mod docutils literal notranslate"><span class="pre">conf_engine</span></code></a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href=""><code class="xref py py-mod docutils literal notranslate"><span class="pre">conf_engine.configuration</span></code></a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, Connectria, LLC.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 5.0.2.
+    </div>
+  </body>
+</html>

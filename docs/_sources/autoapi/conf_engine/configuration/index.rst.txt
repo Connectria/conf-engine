@@ -1,0 +1,122 @@
+:py:mod:`conf_engine.configuration`
+===================================
+
+.. py:module:: conf_engine.configuration
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   conf_engine.configuration.ConfigGroup
+   conf_engine.configuration.Configuration
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   conf_engine.configuration.REGISTERED_PARSERS
+
+
+.. py:data:: REGISTERED_PARSERS
+   
+
+   
+
+.. py:class:: ConfigGroup(name: Union[str, None], namespace: str = None, cache: bool = True)
+
+   .. py:method:: __getattr__(self, item: str)
+
+
+   .. py:method:: __contains__(self, item)
+
+
+   .. py:method:: _get_option(self, option: str)
+
+
+   .. py:method:: _cache_option_value(self, name, value)
+
+
+   .. py:method:: _get_option_value_from_cache(self, name)
+
+
+   .. py:method:: _option_value_cached(self, name)
+
+
+   .. py:method:: _get_option_value(self, option: conf_engine.options.Option, group)
+
+
+   .. py:method:: _get_option_value_from_source(self, option: conf_engine.options.Option, group)
+
+
+   .. py:method:: flush_cache(self, name: str = None)
+
+      Flush the value cache and read from configuration source on
+      next access.
+      :param name: If name is provided, only the value for the named
+      option is flushed.
+      :return:
+
+
+   .. py:method:: register_options(self, options: [conf_engine.options.Option])
+
+
+   .. py:method:: register_option(self, option: conf_engine.options.Option)
+
+
+
+.. py:class:: Configuration(namespace: str = None, cache: bool = True)
+
+   .. py:method:: __getattr__(self, item)
+
+
+   .. py:method:: __contains__(self, item)
+
+
+   .. py:method:: register_options(self, options: [conf_engine.options.Option], group: str = None)
+
+      Register bulk options with the config.
+      :param options: List of options.
+      :param group: Group name to which options are added.
+      :return:
+
+
+   .. py:method:: flush_cache(self)
+
+      Signal all configuration groups to flush their cache and
+      read from configuration source on next access.
+
+
+   .. py:method:: register_option(self, option: conf_engine.options.Option, group: str = None, create_group: bool = True)
+
+      Register options with the config.  If group is specified, the options are
+      added to the option group, otherwise options are registered to the base object.
+      :param option: Option to register.
+      :param group: Group name to which the option is added.
+      :param create_group: Create the group if not already registered.
+      :return:
+
+
+   .. py:method:: registered_parsers(self)
+      :property:
+
+
+   .. py:method:: _get_group(self, group: str)
+
+      Get group by its name as called during attribute access against the
+      configuration object.  If the option cannot be found an UnregisteredOption
+      error will be raised.
+
+      If the option matches a group name, the group object is returned and the
+      subsequent attribute access is handled by the group object.
+
+
+

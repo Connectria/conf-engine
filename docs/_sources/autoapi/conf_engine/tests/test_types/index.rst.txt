@@ -1,0 +1,84 @@
+:py:mod:`conf_engine.tests.test_types`
+======================================
+
+.. py:module:: conf_engine.tests.test_types
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   conf_engine.tests.test_types.TestString
+   conf_engine.tests.test_types.TestNumber
+   conf_engine.tests.test_types.TestBoolean
+
+
+
+
+.. py:class:: TestString
+
+   .. py:method:: test_case_sensitive(self)
+
+
+   .. py:method:: test_invalid_choices(self)
+
+
+   .. py:method:: test_case_sensitive_choices(self)
+
+
+   .. py:method:: test_case_insensitive_choices(self)
+
+
+
+.. py:class:: TestNumber
+
+   .. py:method:: test_number(self)
+
+
+   .. py:method:: test_integer(self)
+
+
+   .. py:method:: test_float(self)
+
+
+   .. py:method:: test_is_integer_method(self)
+
+
+   .. py:method:: test_is_float_method(self)
+
+
+   .. py:method:: test_is_number_method(self)
+
+
+   .. py:method:: test_minimum(self)
+
+
+   .. py:method:: test_maximum(self)
+
+
+   .. py:method:: test_choices(self)
+
+
+   .. py:method:: test_invalid_choice(self)
+
+
+   .. py:method:: test_minimum_over_maximum(self)
+
+
+
+.. py:class:: TestBoolean
+
+   .. py:method:: test_true_values(self)
+
+
+   .. py:method:: test_false_values(self)
+
+
+   .. py:method:: test_not_boolean(self)
+
+
+

@@ -1,0 +1,93 @@
+:py:mod:`conf_engine.options`
+=============================
+
+.. py:module:: conf_engine.options
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   conf_engine.options._UndefinedDefault
+   conf_engine.options.Option
+   conf_engine.options.StringOption
+   conf_engine.options.NumberOption
+   conf_engine.options.BooleanOption
+
+
+
+
+Attributes
+~~~~~~~~~~
+
+.. autoapisummary::
+
+   conf_engine.options.UNDEFINED
+
+
+.. py:class:: _UndefinedDefault
+
+   An object that represents a default that is not defined.  Should not be
+   used outside the Config Engine module itself.
+
+
+.. py:data:: UNDEFINED
+   
+
+   
+
+.. py:class:: Option(name, option_type: conf_engine.types.Type = None, default: any = UNDEFINED)
+
+   CLass representing an option to be registered with the Configuration object.
+   All Options have a subset of shared properties, name, default, type, etc.
+   Inheriting classes may implement additional kwargs as appropriate to their type.
+   When a default is set it will be validated using the option_type specified.
+
+   .. py:method:: __str__(self)
+
+      Return str(self).
+
+
+   .. py:method:: __call__(self, value)
+
+
+   .. py:method:: __eq__(self, other: Option)
+
+      Return self==value.
+
+
+
+.. py:class:: StringOption(*args, option_type: conf_engine.types.String = None, ignore_case: bool = False, max_length: int = None, choices: Iterable = None, type_name: str = 'string type', **kwargs)
+
+   Bases: :py:obj:`Option`
+
+   CLass representing an option to be registered with the Configuration object.
+   All Options have a subset of shared properties, name, default, type, etc.
+   Inheriting classes may implement additional kwargs as appropriate to their type.
+   When a default is set it will be validated using the option_type specified.
+
+
+.. py:class:: NumberOption(*args, option_type: conf_engine.types.Number = None, minimum: Union[int, float] = None, maximum: Union[int, float] = None, choices: Iterable = None, type_name: str = 'number type', cast: Callable = int, **kwargs)
+
+   Bases: :py:obj:`Option`
+
+   CLass representing an option to be registered with the Configuration object.
+   All Options have a subset of shared properties, name, default, type, etc.
+   Inheriting classes may implement additional kwargs as appropriate to their type.
+   When a default is set it will be validated using the option_type specified.
+
+
+.. py:class:: BooleanOption(*args, option_type=t.Boolean(), **kwargs)
+
+   Bases: :py:obj:`Option`
+
+   CLass representing an option to be registered with the Configuration object.
+   All Options have a subset of shared properties, name, default, type, etc.
+   Inheriting classes may implement additional kwargs as appropriate to their type.
+   When a default is set it will be validated using the option_type specified.
+
+

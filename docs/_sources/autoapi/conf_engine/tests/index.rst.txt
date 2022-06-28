@@ -1,0 +1,18 @@
+:py:mod:`conf_engine.tests`
+===========================
+
+.. py:module:: conf_engine.tests
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   conftest/index.rst
+   test_config/index.rst
+   test_options/index.rst
+   test_types/index.rst
+
+

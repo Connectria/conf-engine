@@ -1,0 +1,47 @@
+:py:mod:`conf_engine`
+=====================
+
+.. py:module:: conf_engine
+
+
+Subpackages
+-----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 3
+
+   parsers/index.rst
+   tests/index.rst
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   __version__/index.rst
+   configuration/index.rst
+   exceptions/index.rst
+   options/index.rst
+   types/index.rst
+
+
+Package Contents
+----------------
+
+.. py:data:: ConfigGroup
+   
+
+   
+
+.. py:data:: Configuration
+   
+
+   
+
+.. py:data:: config
+   
+
+   
+

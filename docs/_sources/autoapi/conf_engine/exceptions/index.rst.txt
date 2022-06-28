@@ -1,0 +1,69 @@
+:py:mod:`conf_engine.exceptions`
+================================
+
+.. py:module:: conf_engine.exceptions
+
+
+Module Contents
+---------------
+
+.. py:exception:: ConfigError(message)
+
+   Bases: :py:obj:`Exception`
+
+   Common base class for all non-exit exceptions.
+
+   .. py:method:: __str__(self)
+
+      Return str(self).
+
+
+
+.. py:exception:: UnregisteredOption(message)
+
+   Bases: :py:obj:`ConfigError`
+
+   Common base class for all non-exit exceptions.
+
+   .. py:method:: __str__(self)
+
+      Return str(self).
+
+
+
+.. py:exception:: UnregisteredGroup(message)
+
+   Bases: :py:obj:`ConfigError`
+
+   Common base class for all non-exit exceptions.
+
+   .. py:method:: __str__(self)
+
+      Return str(self).
+
+
+
+.. py:exception:: DuplicateOptionError(message)
+
+   Bases: :py:obj:`ConfigError`
+
+   Common base class for all non-exit exceptions.
+
+   .. py:method:: __str__(self)
+
+      Return str(self).
+
+
+
+.. py:exception:: ValueNotFound(message)
+
+   Bases: :py:obj:`ConfigError`
+
+   Common base class for all non-exit exceptions.
+
+   .. py:method:: __str__(self)
+
+      Return str(self).
+
+
+

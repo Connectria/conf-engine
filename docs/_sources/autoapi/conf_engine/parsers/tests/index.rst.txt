@@ -1,0 +1,16 @@
+:py:mod:`conf_engine.parsers.tests`
+===================================
+
+.. py:module:: conf_engine.parsers.tests
+
+
+Submodules
+----------
+.. toctree::
+   :titlesonly:
+   :maxdepth: 1
+
+   test_env/index.rst
+   test_ini_file/index.rst
+
+

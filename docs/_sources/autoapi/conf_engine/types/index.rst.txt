@@ -1,0 +1,116 @@
+:py:mod:`conf_engine.types`
+===========================
+
+.. py:module:: conf_engine.types
+
+
+Module Contents
+---------------
+
+Classes
+~~~~~~~
+
+.. autoapisummary::
+
+   conf_engine.types.Type
+   conf_engine.types.Number
+   conf_engine.types.Integer
+   conf_engine.types.Float
+   conf_engine.types.String
+   conf_engine.types.Boolean
+
+
+
+
+.. py:class:: Type(type_name: str = 'unknown type')
+
+   .. py:method:: __call__(self, value)
+
+      Value is passed to the type object for the object to verify that the value
+      matches the parameters defined for the type.
+      :param value:
+      :return:
+
+
+   .. py:method:: __eq__(self, other: Type)
+
+      Return self==value.
+
+
+
+.. py:class:: Number(minimum: Union[int, float] = None, maximum: Union[int, float] = None, choices: Iterable = None, type_name: str = 'number type', cast: Callable = int)
+
+   Bases: :py:obj:`Type`
+
+   .. py:attribute:: CAST_OPTIONS
+      
+
+      
+
+   .. py:method:: __call__(self, value)
+
+      Value is passed to the type object for the object to verify that the value
+      matches the parameters defined for the type.
+      :param value:
+      :return:
+
+
+   .. py:method:: _is_float(value)
+      :staticmethod:
+
+
+   .. py:method:: _is_integer(value)
+      :staticmethod:
+
+
+   .. py:method:: _is_number(value)
+      :staticmethod:
+
+
+
+.. py:class:: Integer(minimum: int = None, maximum: int = None, choices: Iterable = None, type_name: str = 'number type', cast: Callable = int)
+
+   Bases: :py:obj:`Number`
+
+
+.. py:class:: Float(minimum: int = None, maximum: int = None, choices: Iterable = None, type_name: str = 'number type', cast: Callable = float)
+
+   Bases: :py:obj:`Number`
+
+
+.. py:class:: String(ignore_case: bool = False, max_length: int = None, choices: Iterable = None, type_name: str = 'string type')
+
+   Bases: :py:obj:`Type`
+
+   .. py:method:: __call__(self, value)
+
+      Value is passed to the type object for the object to verify that the value
+      matches the parameters defined for the type.
+      :param value:
+      :return:
+
+
+
+.. py:class:: Boolean(type_name: str = 'boolean type')
+
+   Bases: :py:obj:`Type`
+
+   .. py:attribute:: TRUE
+      :annotation: = ['true', '1', 'on', 'yes']
+
+      
+
+   .. py:attribute:: FALSE
+      :annotation: = ['false', '0', 'off', 'no']
+
+      
+
+   .. py:method:: __call__(self, value)
+
+      Value is passed to the type object for the object to verify that the value
+      matches the parameters defined for the type.
+      :param value:
+      :return:
+
+
+
